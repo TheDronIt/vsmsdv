@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<title>ВСМС ДВ | {{District.Name}}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/nav.css' %}">
+</head>
+<body>
+{% block content %}
+	{% include 'include/nav.html' %}
+	<div class="wrapper">
+		<div class="section">
+			<div class="page_way">
+				<a href="/" class="page_way__link">Главная</a> > <a href="/district">Проекты</a> > {{District.Name}}
+			</div>
+			<div class="page__headline">
+				{{District.Name}}
+			</div>
+			<div class="project__container">
+				<br><br>
+				{% for Project in Project %}
+					<a href="/project/{{Project.id}}" class="district_el">
+						{{Project.Title}}
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% include 'include/footer.html' %}
+{% endblock %}
+</body>
+</html>

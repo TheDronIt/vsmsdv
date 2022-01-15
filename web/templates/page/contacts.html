@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<title>ВСМС ДВ | Контакты</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/nav.css' %}">
+</head>
+<body>
+{% block content %}
+	{% include 'include/nav.html' %}
+	<div class="wrapper">
+		<div class="section">
+			<div class="page_way">
+				<a href="/" class="page_way__link">Главная</a> > Контакты
+			</div>
+			<div class="page__headline">
+				Контакты
+			</div>
+			<div class="contacts__container">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.0272987680637!2d135.06256141614853!3d48.475189979251866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5efaea271a8b7937%3A0xa3d5652e0fbe65f4!2z0YPQuy4g0KTRgNGD0L3Qt9C1LCA2MCwg0KXQsNCx0LDRgNC-0LLRgdC6LCDQpdCw0LHQsNGA0L7QstGB0LrQuNC5INC60YDQsNC5LCA2ODAwMDA!5e0!3m2!1sru!2sru!4v1639884015451!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe><br><br>
+				<div class="contacts_el">
+					<div class="contacts_el__title">Адрес</div>
+					Россия, Хабаровский край<br>г Хабаровск. ул Фрунзе 60, каб. 302
+				</div>
+				<div class="contacts_el">
+					<div class="contacts_el__title">Телефон</div>
+					<a href="tel:88000000000">8(800)000-00-00</a>
+				</div>
+				<div class="contacts_el">
+					<div class="contacts_el__title">Почта</div>
+					<a href="mailto:mail@mail.ru">mail@mail.ru</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include 'include/footer.html' %}
+{% endblock %}
+</body>
+</html>

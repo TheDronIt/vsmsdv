@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<title>ВСМС ДВ</title>
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/nav.css' %}">
+</head>
+<body>
+{% block content %}
+	{% include 'include/nav.html' %}
+	<div class="big-banner">
+		<div class="big-banner__container">
+			<div class="big-banner_message">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+			</div>
+			<br>
+			<a href="#" class="big-banner__button button">Смотреть видео</a>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="chapter__headline">
+			Новости
+		</div>
+		<div class="card__container">
+
+			{% for News in News %}
+				<div class="card_el">
+					<img src="{{News.Image.url}}">
+					<div class="card_el__title">
+						{{News.Title}}
+					</div>
+					<div class="card_el__date">
+						{{News.Date}}
+					</div>
+					<div class="card_el_button">
+						<a href="/news/{{News.id}}" class="button">
+							Читать	
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+		
+		</div>
+		<a href="/news" class="section_more">Смотреть больше</a>
+	</div>
+
+	<div class="section">
+		<div class="chapter__headline">
+			Проекты
+		</div>
+		<div class="card__container">
+
+			{% for Project in Project %}
+				<div class="card_el">
+					<img src="{{Project.Image.url}}">
+					<div class="card_el__title">
+						{{Project.Title}}
+					</div>
+					<div class="card_el__date">
+						{{Project.Date}}
+					</div>
+					<div class="card_el_button">
+						<a href="/project/{{Project.id}}" class="button">
+							Читать	
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+
+		</div>
+		<a href="/district" class="section_more">Смотреть больше</a>
+	</div>
+
+	<div class="second-background">
+		<div class="section">
+			<div class="chapter__headline">
+				Президиум
+			</div>
+			<div class="staff_container">
+				<div class="staff_el">
+					<img src="{% static 'web/img/byhr.jpg' %}">
+					<div class="staff_el__FIO">
+						Бухряков<br>Юрий Иванович
+					</div>
+					<div class="staff_el__function">
+						Глава
+					</div>
+				</div>
+				<div class="staff_el">
+					<img src="{% static 'web/img/krav.jpg' %}">
+					<div class="staff_el__FIO">
+						Кравчук<br>Сергей Анатольевич
+					</div>
+					<div class="staff_el__function">
+						Член Президиума
+					</div>
+				</div>
+				<div class="staff_el">
+					<img src="{% static 'web/img/masl.jpg' %}">
+					<div class="staff_el__FIO">
+						Маслов<br>Алексей Михайлович
+					</div>
+					<div class="staff_el__function">
+						Глава
+					</div>
+				</div>
+				<div class="staff_el">
+					<img src="{% static 'web/img/jc.jpg' %}">
+					<div class="staff_el__FIO">
+						Яц<br>Александр Петрович 
+					</div>
+					<div class="staff_el__function">
+						Глава
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include 'include/footer.html' %}
+{% endblock %}
+</body>
+</html>

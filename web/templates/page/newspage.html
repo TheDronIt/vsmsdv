@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<title>ВСМС ДВ | {{News.Title}}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/nav.css' %}">
+</head>
+<body>
+{% block content %}
+	{% include 'include/nav.html' %}
+	<div class="wrapper">
+		<div class="section">
+			<div class="page_way">
+				<a href="/" class="page_way__link">Главная</a> > <a href="/news">Новости</a> > {{News.Title}}
+			</div>
+			<div class="page__headline">
+				{{News.Title}}
+			</div>
+			<div class="about-news_date">
+				{{News.Date}}
+			</div>
+			<br><br>
+			<img src="{{News.Image.url}}">
+			<br><br>
+			<div>
+				{{News.Text|safe}}
+			</div>
+		</div>
+	</div>
+	{% include 'include/footer.html' %}
+{% endblock %}
+</body>
+</html>

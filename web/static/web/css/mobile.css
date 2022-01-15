@@ -1,0 +1,79 @@
+@media screen and (max-width: 980px){
+	html
+	{
+		font-size:  30px;
+	}
+	.wrapper
+	{
+		min-height: 92.5vh;
+		padding: 0 90px;
+	}
+	.big-banner_message
+	{
+		font-size: 1.3rem;
+		line-height: 1.3rem;
+	}
+	.big-banner__button
+	{
+		font-size: 1.2rem;
+	}
+	.card_el img
+	{
+		height: 326px;
+	}
+	.card__container 
+	{
+		grid-template-columns: repeat(auto-fit, 580px);
+	}
+	.card_el__title
+	{
+		height: auto;
+		padding: 40px 25px;
+	}
+	.card_el__date
+	{
+		font-size: 0.4rem;
+	}
+	.card_el_button
+	{
+		font-size: 1.2rem;
+	}
+	.section_more
+	{
+		font-size:  0.4rem;
+	}
+	.staff_container
+	{
+	    grid-template-columns: repeat(auto-fit, 400px);
+	    grid-row-gap: 50px;
+	    font-size: 0.6rem;
+	}
+	.staff_el__FIO
+	{
+		font-size: 0.75rem;
+	}
+	.staff_el img
+	{
+		height: 400px;
+	}
+	.news_el_image
+	{
+		width: 600px;
+		height: 337px;
+	}
+	.news_el 
+	{
+		grid-template-columns: 600px;
+		justify-content: center;
+	}
+	.news__container__mobile
+	{
+		margin-top: 50px;
+		display: grid;
+		grid-row-gap: 80px;
+	}
+	.news_container
+	{
+		display: none;
+	}
+}
