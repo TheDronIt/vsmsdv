@@ -1,0 +1,12 @@
+.footer
+{
+	color: #CECECE;
+	background-color: black;
+	text-align: center;
+	font-size: 0.7rem;
+	padding: 40px 100px 20px 100px;
+}
+.footer a:hover
+{
+	color: white;
+}
